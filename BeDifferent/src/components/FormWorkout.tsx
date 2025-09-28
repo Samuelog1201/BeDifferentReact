@@ -41,7 +41,7 @@ const FormWorkout = () => {
       <h2>Agregar Workout</h2>
 
       <div className="form-row">
-        <label>Nombre:</label>
+        <label>Ejercicio:</label>
         <input
           type="text"
           placeholder="Ej: Sentadillas"
