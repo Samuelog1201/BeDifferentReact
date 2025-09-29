@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+.form-ejercicio {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-ejercicio h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-ejercicio input {
+  display: block;
+  margin-bottom: 8px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.form-ejercicio input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.form-ejercicio button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.form-ejercicio button:hover {
+  background: #43a047;
+}

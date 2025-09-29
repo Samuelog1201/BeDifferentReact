@@ -1,24 +1,24 @@
 import DashboardCard from "../components/DashboardCard";
-import { useWorkout } from "../context/WorkoutContext";
+import { useRoutine } from "../context/RoutineContext";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const workoutContext = useWorkout();
+  const routineContext = useRoutine();
 
-  if (!workoutContext) {
-    return <p>Error: WorkoutContext no está disponible</p>;
+  if (!routineContext) {
+    return <p>Error: RoutineContext not available</p>;
   }
 
-  const { workouts } = workoutContext;
+  const { routines } = routineContext;
 
   return (
     <div className="dashboard">
       <h1>Dashboard</h1>
 
       <div className="dashboard-cards">
-        <DashboardCard title="Workouts" value={workouts.length} />
-        <DashboardCard title="Minutos" value={120} />
-        <DashboardCard title="Calorías" value={500} />
+        <DashboardCard title="Routines" value={routines.length} />
+        <DashboardCard title="Minutes" value={120} />
+        <DashboardCard title="Calories" value={500} />
       </div>
     </div>
   );
