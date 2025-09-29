@@ -24,7 +24,7 @@ const Register = () => {
 
   return (
     <div className="auth-container">
-      <img src="https://i.imgur.com/LGMqr68.png" alt="BeDifferent logo" className="auth-logo" />
+      <img src="https://i.imgur.com/5zftMCK.png" alt="BeDifferent logo" className="auth-logo" />
       <form className="auth-card" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Name" onChange={handleChange} />
         <input type="text" name="username" placeholder="Username" onChange={handleChange} />

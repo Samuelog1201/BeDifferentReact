@@ -16,3 +16,20 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.btn-delete-goal {
+  background: #5a82a5; 
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-delete-goal:hover {
+  background: #466783;   
+}

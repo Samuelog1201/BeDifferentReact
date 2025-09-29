@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useGoals } from "../context/GoalContext";
+import type { Goal } from "../types/GoalType";
 import "./SetGoalForm.css";
 
 const SetGoalForm = () => {
+  const { addGoal } = useGoals();
+
   const [exercise, setExercise] = useState("");
   const [reps, setReps] = useState(0);
   const [kg, setKg] = useState(0);
@@ -10,6 +14,18 @@ const SetGoalForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const newGoal: Goal = {
+      id: Date.now(),
+      exercise,
+      reps,
+      sets,
+      kg,
+      rpe,
+    };
+
+    addGoal(newGoal);
+
     setExercise("");
     setReps(0);
     setKg(0);
