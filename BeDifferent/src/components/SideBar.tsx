@@ -1,18 +1,41 @@
 import { useNavigate } from "react-router-dom";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <aside>
-      <h2>Menu</h2>
-      <ul>
-        <li><button onClick={() => navigate("/")}>Home</button></li>
-        <li><button onClick={() => navigate("/dashboard")}>Dashboard</button></li>
-        <li><button onClick={() => navigate("/routines")}>Routines</button></li>
-        <li><button onClick={() => navigate("/goals")}>Goals</button></li>
-        <li><button onClick={() => navigate("/posts")}>Posts</button></li>
-      </ul>
+    <aside className="sidebar">
+      {/* Logo */}
+      <div className="sidebar-logo">
+        <img src="https://i.imgur.com/5zftMCK.png" alt="BeDifferent Logo" />
+      </div>
+
+      {/* Main menu */}
+      <nav className="sidebar-nav">
+        <button onClick={() => navigate("/dashboard")} className="nav-item">
+          <span className="icon">🏠</span> Dashboard
+        </button>
+        <button onClick={() => navigate("/log")} className="nav-item">
+          <span className="icon">📝</span> Log Workout
+        </button>
+        <button onClick={() => navigate("/goals")} className="nav-item">
+          <span className="icon">🎯</span> Goals
+        </button>
+        <button onClick={() => navigate("/routines")} className="nav-item">
+          <span className="icon">📋</span> Routines
+        </button>
+      </nav>
+
+      {/* Footer options */}
+      <div className="sidebar-footer">
+        <button onClick={() => navigate("/settings")} className="nav-item">
+          ⚙️ Settings
+        </button>
+        <button onClick={() => navigate("/profile")} className="nav-item">
+          👤 Profile
+        </button>
+      </div>
     </aside>
   );
 };
