@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+.routines-page {
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+}
+
+.routines-page h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.routines-page h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+}
+
+.routine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-routine {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.form-routine {
+  display: flex;
+  gap: 10px;
+}
+
+.form-routine input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-routine button {
+  background: #5a82a5;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.form-routine button:hover {
+  background: #466783;
+}

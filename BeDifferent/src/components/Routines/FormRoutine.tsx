@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useRoutine } from "../context/RoutineContext";
-import type { Routine } from "../types/RoutineType";
+import { useRoutine } from "../../context/RoutineContext";
+import type { Routine } from "../../types/RoutineType";
 import "./FormRoutine.css";
 
 const FormRoutine = () => {

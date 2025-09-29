@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Sidebar from "./components/SideBar";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import Routines from "./pages/Routines";
-import Goals from "./pages/Goals";
+import Sidebar from "./components/SideBar/SideBar";
+import Home from "./pages/Home/Home";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Routines from "./pages/Routines/Routines";
+import Goals from "./pages/Goals/Goals";
 import Posts from "./pages/Posts";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import LogWorkouts from "./pages/LogWorkouts";
-import RoutineDetail from "./pages/RoutineDetail"; 
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import LogWorkouts from "./pages/Log/LogWorkouts";
+import RoutineDetail from "./pages/Routines/RoutineDetail"; 
 
 const Layout = () => {
   const location = useLocation();

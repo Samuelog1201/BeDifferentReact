@@ -1,10 +1,16 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-import type { ReactNode } from "react";
-import type { Log, LogContextType } from "../types/LogType";
+import type { Log } from "../types/LogType";
+
+type LogContextType = {
+  logs: Log[];
+  logWorkout: (routineId: number, routineName: string) => void;
+  deleteLog: (id: number) => void; 
+};
 
 const LogContext = createContext<LogContextType | undefined>(undefined);
 
-export const LogProvider = ({ children }: { children: ReactNode }) => {
+export const LogProvider = ({ children }: { children: React.ReactNode }) => {
   const [logs, setLogs] = useState<Log[]>([]);
 
   const logWorkout = (routineId: number, routineName: string) => {
@@ -12,9 +18,9 @@ export const LogProvider = ({ children }: { children: ReactNode }) => {
       id: Date.now(),
       routineId,
       routineName,
-      createdAt: new Date().toLocaleDateString(),
+      date: new Date().toLocaleDateString(),
     };
-    setLogs((prev) => [newLog, ...prev]);
+    setLogs((prev) => [...prev, newLog]);
   };
 
   const deleteLog = (id: number) => {

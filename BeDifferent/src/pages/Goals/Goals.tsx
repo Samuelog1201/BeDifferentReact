@@ -1,7 +1,7 @@
-import { useGoals } from "../context/GoalContext";
-import GoalCard from "../components/GoalCard";
-import ProcessCard from "../components/ProcessCard";
-import SetGoalForm from "../components/SetGoalForm";
+import { useGoals } from "../../context/GoalContext";
+import GoalCard from "../../components/Goals/GoalCard";
+import ProcessCard from "../../components/Goals/ProcessCard";
+import SetGoalForm from "../../components/Goals/SetGoalForm";
 import "./Goals.css";
 
 const Goals = () => {

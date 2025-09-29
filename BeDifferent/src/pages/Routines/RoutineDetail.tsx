@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useRoutine } from "../context/RoutineContext";
-import FormExercise from "../components/FormExercise";
+import { useRoutine } from "../../context/RoutineContext";
+import FormExercise from "../../components/Routines/FormExercise";
 import "./RoutineDetail.css";
 
 const RoutineDetail = () => {

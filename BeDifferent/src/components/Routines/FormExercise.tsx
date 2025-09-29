@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useRoutine } from "../context/RoutineContext";
-import type { Exercise } from "../types/RoutineType";
+import { useRoutine } from "../../context/RoutineContext";
+import type { Exercise } from "../../types/RoutineType";
 import "./FormExercise.css";
 
 type Props = {

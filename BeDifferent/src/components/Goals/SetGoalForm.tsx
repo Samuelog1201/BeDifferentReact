@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useGoals } from "../context/GoalContext";
-import type { Goal } from "../types/GoalType";
+import { useGoals } from "../../context/GoalContext";
+import type { Goal } from "../../types/GoalType";
 import "./SetGoalForm.css";
 
 const SetGoalForm = () => {

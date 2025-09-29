@@ -1,19 +1,17 @@
-import { useRoutine } from "../context/RoutineContext";
-import { useLogs } from "../context/LogContext";
-import type { Routine } from "../types/RoutineType";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { useRoutine } from "../../context/RoutineContext";
+import { useLogs } from "../../context/LogContext";
+import type { Routine } from "../../types/RoutineType";
 import "./RoutineCard.css";
+
 
 type Props = {
   routine: Routine;
-    title: string;
-    subtitle: string;
 };
 
 const RoutineCard = ({ routine }: Props) => {
   const routineContext = useRoutine();
   const logContext = useLogs();
-  const navigate = useNavigate(); 
 
   if (!routineContext || !logContext) {
     return <p>Error: Context not available</p>;
@@ -21,6 +19,7 @@ const RoutineCard = ({ routine }: Props) => {
 
   const { deleteRoutine } = routineContext;
   const { logWorkout } = logContext;
+  const navigate = useNavigate();
 
   return (
     <div className="routine-card">
@@ -36,11 +35,8 @@ const RoutineCard = ({ routine }: Props) => {
           Use
         </button>
         <button className="btn-action">Share</button>
-        <button
-          className="btn-action"
-          onClick={() => navigate(`/routines/${routine.id}`)} 
-        >
-          Edit
+        <button className="btn-action" onClick={() => navigate(`/routines/${routine.id}`)}>
+        Edit
         </button>
       </div>
     </div>

@@ -1,6 +1,6 @@
-import { useRoutine } from "../context/RoutineContext";
-import FormRoutine from "../components/FormRoutine";
-import RoutineCard from "../components/RoutineCard";
+import { useRoutine } from "../../context/RoutineContext";
+import FormRoutine from "../../components/Routines/FormRoutine";
+import RoutineCard from "../../components/Routines/RoutineCard";
 import "./Routines.css";
 
 const Routines = () => {

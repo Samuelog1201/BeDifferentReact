@@ -1,4 +1,4 @@
-import { useLogs } from "../context/LogContext";
+import { useLogs } from "../../context/LogContext";
 import "./LogWorkouts.css";
 
 const LogWorkouts = () => {
@@ -16,7 +16,7 @@ const LogWorkouts = () => {
             <li key={log.id} className="log-item">
               <div>
                 <h3>{log.routineName}</h3>
-                <p>{log.createdAt}</p>
+                <p>{log.date}</p>
               </div>
               <button onClick={() => deleteLog(log.id)}>Delete</button>
             </li>
