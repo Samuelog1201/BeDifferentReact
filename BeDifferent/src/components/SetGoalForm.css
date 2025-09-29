@@ -1,0 +1,56 @@
+.set-goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.set-goal-form label {
+  font-size: 14px;   
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.set-goal-form select,
+.set-goal-form input {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;     
+}
+
+.set-goal-form input::placeholder {
+  font-size: 14px;     
+  color: #aaa;
+}
+
+.goal-row {
+  display: flex;
+  gap: 10px;
+}
+
+.goal-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.set-goal-form button {
+  background: #5a82a5;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.set-goal-form button:hover {
+  background: #466783;
+}
