@@ -17,13 +17,12 @@ const FormRoutine = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-  const newRoutine: Routine = {
-    id: Date.now(),
-    name,
-    createdAt: new Date().toLocaleDateString(),
-    exercises: []
-  };
-
+    const newRoutine: Routine = {
+      id: Date.now(),
+      name,
+      exercises: [],
+      createdAt: new Date().toLocaleDateString(), 
+    };
 
     addRoutine(newRoutine);
     setName("");

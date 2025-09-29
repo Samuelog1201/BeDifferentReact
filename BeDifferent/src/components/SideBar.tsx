@@ -16,7 +16,7 @@ const Sidebar = () => {
         <button onClick={() => navigate("/dashboard")} className="nav-item">
           <span className="icon">🏠</span> Dashboard
         </button>
-        <button onClick={() => navigate("/log")} className="nav-item">
+        <button onClick={() => navigate("/logs")} className="nav-item">
           <span className="icon">📝</span> Log Workout
         </button>
         <button onClick={() => navigate("/goals")} className="nav-item">

@@ -1,0 +1,46 @@
+.log-page {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.log-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.log-item {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-item h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.log-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.log-item button {
+  background: #5a82a5;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.log-item button:hover {
+  background: #466783;
+}

@@ -7,11 +7,12 @@ import Goals from "./pages/Goals";
 import Posts from "./pages/Posts";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import LogWorkouts from "./pages/LogWorkouts";
+import RoutineDetail from "./pages/RoutineDetail"; 
 
 const Layout = () => {
   const location = useLocation();
 
-  // aqui oculto el sidebar
   const hideSidebar =
     location.pathname === "/" ||
     location.pathname === "/login" ||
@@ -27,6 +28,8 @@ const Layout = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/routines" element={<Routines />} />
+          <Route path="/routines/:id" element={<RoutineDetail />} /> 
+          <Route path="/logs" element={<LogWorkouts />} />
           <Route path="/goals" element={<Goals />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/home" element={<Home />} />

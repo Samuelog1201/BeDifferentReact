@@ -1,20 +1,50 @@
-import "./ProcessCard.css";
+import { useRoutine } from "../context/RoutineContext";
+import { useLogs } from "../context/LogContext";
+import type { Routine } from "../types/RoutineType";
+import { useNavigate } from "react-router-dom"; 
+import "./RoutineCard.css";
 
-type ProcessCardProps = {
-  title: string;
-  subtitle: string;
+type Props = {
+  routine: Routine;
+    title: string;
+    subtitle: string;
 };
 
-const ProcessCard = ({ title, subtitle }: ProcessCardProps) => {
+const RoutineCard = ({ routine }: Props) => {
+  const routineContext = useRoutine();
+  const logContext = useLogs();
+  const navigate = useNavigate(); 
+
+  if (!routineContext || !logContext) {
+    return <p>Error: Context not available</p>;
+  }
+
+  const { deleteRoutine } = routineContext;
+  const { logWorkout } = logContext;
+
   return (
-    <div className="process-card">
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
-      <div className="process-placeholder">
-        <span>Graph</span>
+    <div className="routine-card">
+      <div className="routine-header">
+        <h2>{routine.name}</h2>
+        <button className="btn-delete" onClick={() => deleteRoutine(routine.id)}>
+          ✕
+        </button>
+      </div>
+
+      <div className="routine-actions">
+        <button className="btn-action" onClick={() => logWorkout(routine.id, routine.name)}>
+          Use
+        </button>
+        <button className="btn-action">Share</button>
+        <button
+          className="btn-action"
+          onClick={() => navigate(`/routines/${routine.id}`)} 
+        >
+          Edit
+        </button>
       </div>
     </div>
   );
 };
 
-export default ProcessCard;
+export default RoutineCard;

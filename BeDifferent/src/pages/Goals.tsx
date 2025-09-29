@@ -35,7 +35,12 @@ const Goals = () => {
 
         <div className="goals-right">
           <h2>Process</h2>
-          <ProcessCard title="Progress Tracking" subtitle="Charts coming soon..." />
+          <ProcessCard title="Progress Tracking" subtitle="Charts coming soon..." routine={{
+            id: 0,
+            name: "",
+            createdAt: "",
+            exercises: []
+          }} />
         </div>
       </div>
     </div>

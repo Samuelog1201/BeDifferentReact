@@ -34,7 +34,9 @@ const RoutineDetail = () => {
         <div className="routine-card">
           <div className="routine-header">
             <h3>{routine.name}</h3>
-            <span className="routine-date">{routine.createdAt}</span>
+            {routine.createdAt && (
+              <span className="routine-date">{routine.createdAt}</span>
+            )}
           </div>
 
           <table>
