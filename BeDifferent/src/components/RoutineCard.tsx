@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useRoutine } from "../context/RoutineContext";
 import type { Routine } from "../types/RoutineType";
 import "./RoutineCard.css";
@@ -8,6 +9,7 @@ type Props = {
 
 const RoutineCard = ({ routine }: Props) => {
   const routineContext = useRoutine();
+  const navigate = useNavigate();
 
   if (!routineContext) {
     return <p>Error: RoutineContext not available</p>;
@@ -30,7 +32,12 @@ const RoutineCard = ({ routine }: Props) => {
       <div className="routine-actions">
         <button className="btn-action">Use</button>
         <button className="btn-action">Share</button>
-        <button className="btn-action">Edit</button>
+        <button
+          className="btn-action"
+          onClick={() => navigate(`/routines/${routine.id}`)}
+        >
+          Edit
+        </button>
       </div>
     </div>
   );

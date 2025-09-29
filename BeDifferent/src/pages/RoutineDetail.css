@@ -1,0 +1,75 @@
+.routine-detail {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Lado izquierdo */
+.routine-form {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Lado derecho */
+.routine-summary {
+  flex: 2;
+}
+
+.routine-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.routine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.routine-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.routine-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.routine-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.routine-card th,
+.routine-card td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.routine-card th {
+  font-weight: 600;
+  color: #333;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ff4d4f;
+  transition: color 0.2s ease;
+}
+
+.btn-delete:hover {
+  color: #d9363e;
+}

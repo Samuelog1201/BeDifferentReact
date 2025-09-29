@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Routines from "./pages/Routines"; 
 import Goals from "./pages/Goals";
 import Posts from "./pages/Posts";
+import RoutineDetail from "./pages/RoutineDetail";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/routines" element={<Routines />} /> 
+            <Route path="/routines/:id" element={<RoutineDetail />} />
             <Route path="/goals" element={<Goals />} />
             <Route path="/posts" element={<Posts />} />
           </Routes>

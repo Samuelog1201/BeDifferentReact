@@ -1,55 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
-.routine-card {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 12px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+.workouts-page {
   font-family: 'Montserrat', sans-serif;
 }
 
-.routine-header {
+.workouts-page h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.no-workouts {
+  font-size: 14px;
+  color: #777;
+}
+
+.workout-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.workout-item {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
   align-items: center;
+  font-size: 14px;
 }
 
-.routine-header h2 {
-  font-size: 18px;
+.workout-item span {
+  font-weight: 400;
+}
+
+.workout-name {
   font-weight: 600;
-  margin: 0;
-}
-
-.btn-delete {
-  background: transparent;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: #f44336;
-}
-
-.btn-delete:hover {
-  color: #d32f2f;
-}
-
-.routine-actions {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-}
-
-.btn-action {
   flex: 1;
-  background: #f0f0f0;
-  border: none;
-  padding: 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.btn-action:hover {
-  background: #e0e0e0;
 }

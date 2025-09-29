@@ -8,8 +8,9 @@ export type Exercise = {
 
 export type Routine = {
   id: number;
-  name: string;         // nombre de la rutina
-  exercises: Exercise[]; // lista de ejercicios dentro de la rutina
+  name: string;
+  createdAt: string;
+  exercises: Exercise[];
 };
 
 export type RoutineContextType = {
