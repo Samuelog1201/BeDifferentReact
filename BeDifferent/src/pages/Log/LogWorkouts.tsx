@@ -1,8 +1,10 @@
 import { useLogs } from "../../context/LogContext";
+import { useNavigate } from "react-router-dom";
 import "./LogWorkouts.css";
 
 const LogWorkouts = () => {
   const { logs, deleteLog } = useLogs();
+  const navigate = useNavigate();
 
   return (
     <div className="log-page">
@@ -18,7 +20,15 @@ const LogWorkouts = () => {
                 <h3>{log.routineName}</h3>
                 <p>{log.date}</p>
               </div>
-              <button onClick={() => deleteLog(log.id)}>Delete</button>
+
+              <div className="log-actions">
+                <button onClick={() => navigate(`/routines/${log.routineId}`)}>
+                  View
+                </button>
+                <button onClick={() => deleteLog(log.id)} className="btn-delete">
+                  Delete
+                </button>
+              </div>
             </li>
           ))}
         </ul>

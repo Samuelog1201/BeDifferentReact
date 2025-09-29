@@ -42,5 +42,40 @@
 }
 
 .log-item button:hover {
+  background: #1f364b;
+}
+
+.log-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.log-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.log-actions button:first-child:hover {
   background: #466783;
+  color: #fff; 
+
+}
+
+.log-actions .btn-delete:hover {
+  background: #1f364b;
+  color: #fff; 
+}
+
+.log-actions .btn-delete {
+  background: #5a82a5;
+  color: #fff;
+}
+
+.log-actions .btn-delete:hover {
+  background: #1f364b;
 }
