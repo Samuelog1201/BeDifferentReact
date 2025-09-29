@@ -1,3 +1,5 @@
+import "./DashboardCard.css";
+
 type Props = {
   title: string;
   value: string | number;
@@ -5,7 +7,7 @@ type Props = {
 
 const DashboardCard = ({ title, value }: Props) => {
   return (
-    <div>
+    <div className="dashboard-card">
       <h3>{title}</h3>
       <p>{value}</p>
     </div>
